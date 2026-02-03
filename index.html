@@ -1,0 +1,966 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caroline Pakter | From Showbiz to Shabbos</title>
+    <meta name="description" content="London-based Orthodox Jewish singer and performer. Former West End actress bringing soulful music to women-only audiences worldwide.">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Raleway:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --burgundy: #722F37;
+            --burgundy-dark: #5a252c;
+            --gold: #C9A227;
+            --gold-light: #d4b44a;
+            --cream: #FAF8F5;
+            --cream-dark: #f0ebe3;
+            --charcoal: #1a1a1a;
+            --charcoal-light: #2d2d2d;
+            --text-muted: #6b6b6b;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Raleway', sans-serif;
+            font-weight: 400;
+            color: var(--charcoal);
+            background: var(--cream);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        /* Typography */
+        h1, h2, h3, h4 {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 500;
+            line-height: 1.2;
+        }
+
+        h1 { font-size: clamp(2.5rem, 6vw, 4.5rem); }
+        h2 { font-size: clamp(2rem, 4vw, 3rem); }
+        h3 { font-size: clamp(1.5rem, 3vw, 2rem); }
+
+        p { font-size: 1.05rem; }
+
+        /* Utility */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .section {
+            padding: 6rem 0;
+        }
+
+        .text-center { text-align: center; }
+        .text-gold { color: var(--gold); }
+        .text-burgundy { color: var(--burgundy); }
+        .text-muted { color: var(--text-muted); }
+
+        /* Decorative Elements */
+        .flourish {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+
+        .flourish::before,
+        .flourish::after {
+            content: '';
+            width: 60px;
+            height: 1px;
+            background: var(--gold);
+        }
+
+        .flourish-icon {
+            color: var(--gold);
+            font-size: 0.8rem;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: rgba(250, 248, 245, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(201, 162, 39, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        nav.scrolled {
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+        }
+
+        .nav-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .nav-logo {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--burgundy);
+            text-decoration: none;
+            letter-spacing: 0.05em;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--charcoal);
+            font-size: 0.85rem;
+            font-weight: 500;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background: var(--gold);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--burgundy);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(135deg, var(--cream) 0%, var(--cream-dark) 100%);
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background:
+                radial-gradient(ellipse at 20% 80%, rgba(114, 47, 55, 0.03) 0%, transparent 50%),
+                radial-gradient(ellipse at 80% 20%, rgba(201, 162, 39, 0.05) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            padding-top: 5rem;
+        }
+
+        .hero-text {
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .hero-tagline {
+            font-size: 0.9rem;
+            font-weight: 600;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 1rem;
+        }
+
+        .hero-title {
+            color: var(--burgundy);
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+        }
+
+        .hero-subtitle {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.5rem;
+            font-style: italic;
+            color: var(--charcoal-light);
+            margin-bottom: 2rem;
+        }
+
+        .hero-description {
+            color: var(--text-muted);
+            margin-bottom: 2.5rem;
+            max-width: 500px;
+        }
+
+        .hero-image {
+            position: relative;
+            animation: fadeIn 1.2s ease-out;
+        }
+
+        .hero-image img {
+            width: 100%;
+            max-width: 500px;
+            height: auto;
+            border-radius: 2px;
+            box-shadow:
+                0 25px 50px -12px rgba(0, 0, 0, 0.15),
+                0 0 0 1px rgba(201, 162, 39, 0.1);
+        }
+
+        .hero-image::before {
+            content: '';
+            position: absolute;
+            top: -20px;
+            right: -20px;
+            width: 100%;
+            height: 100%;
+            border: 1px solid var(--gold);
+            border-radius: 2px;
+            z-index: -1;
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 1rem 2rem;
+            font-family: 'Raleway', sans-serif;
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary {
+            background: var(--burgundy);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: var(--burgundy-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(114, 47, 55, 0.3);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--burgundy);
+            border: 1px solid var(--burgundy);
+        }
+
+        .btn-outline:hover {
+            background: var(--burgundy);
+            color: white;
+        }
+
+        /* About Section */
+        .about {
+            background: white;
+            position: relative;
+        }
+
+        .about::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--gold), transparent);
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 4rem;
+            align-items: start;
+        }
+
+        .about-image {
+            position: sticky;
+            top: 8rem;
+        }
+
+        .about-image img {
+            width: 100%;
+            border-radius: 2px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+
+        .about-content h2 {
+            color: var(--burgundy);
+            margin-bottom: 2rem;
+        }
+
+        .about-content p {
+            margin-bottom: 1.5rem;
+            color: var(--charcoal-light);
+        }
+
+        .credentials {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .credential {
+            padding: 0.5rem 1rem;
+            background: var(--cream);
+            border-left: 2px solid var(--gold);
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        /* The Show Section */
+        .show {
+            background: var(--charcoal);
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .show::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background:
+                radial-gradient(ellipse at 30% 0%, rgba(201, 162, 39, 0.1) 0%, transparent 50%),
+                radial-gradient(ellipse at 70% 100%, rgba(114, 47, 55, 0.15) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .show-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .show-header h2 {
+            color: var(--gold);
+        }
+
+        .show-header p {
+            color: rgba(255,255,255,0.7);
+            max-width: 700px;
+            margin: 1.5rem auto 0;
+        }
+
+        .show-gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .show-gallery img {
+            width: 100%;
+            aspect-ratio: 4/5;
+            object-fit: cover;
+            border-radius: 2px;
+            transition: transform 0.5s ease, box-shadow 0.5s ease;
+        }
+
+        .show-gallery img:hover {
+            transform: scale(1.03);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+        }
+
+        .show-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .show-content p {
+            color: rgba(255,255,255,0.8);
+            margin-bottom: 1.5rem;
+        }
+
+        .locations {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0.5rem 1.5rem;
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .locations span {
+            font-size: 0.85rem;
+            color: rgba(255,255,255,0.5);
+        }
+
+        /* Videos Section */
+        .videos {
+            background: var(--cream);
+        }
+
+        .videos-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .videos-header h2 {
+            color: var(--burgundy);
+        }
+
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .video-item {
+            position: relative;
+            aspect-ratio: 16/9;
+            border-radius: 2px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .video-item iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* Music Section */
+        .music {
+            background: white;
+        }
+
+        .music-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .music-header h2 {
+            color: var(--burgundy);
+        }
+
+        .albums {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 3rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .album {
+            text-align: center;
+            padding: 2rem;
+            background: var(--cream);
+            border-radius: 2px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .album:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+        }
+
+        .album-cover {
+            width: 200px;
+            height: 200px;
+            margin: 0 auto 1.5rem;
+            border-radius: 4px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(114, 47, 55, 0.3);
+        }
+
+        .album-cover img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .album h3 {
+            color: var(--burgundy);
+            margin-bottom: 0.5rem;
+        }
+
+        .album p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        /* Contact Section */
+        .contact {
+            background: linear-gradient(135deg, var(--burgundy) 0%, var(--burgundy-dark) 100%);
+            color: white;
+            text-align: center;
+        }
+
+        .contact h2 {
+            color: var(--gold);
+            margin-bottom: 1rem;
+        }
+
+        .contact p {
+            color: rgba(255,255,255,0.8);
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+
+        .contact-item {
+            text-align: center;
+        }
+
+        .contact-item strong {
+            display: block;
+            font-size: 0.8rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-item span,
+        .contact-item a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .contact-item a:hover {
+            color: var(--gold);
+        }
+
+        .btn-gold {
+            background: var(--gold);
+            color: var(--charcoal);
+        }
+
+        .btn-gold:hover {
+            background: var(--gold-light);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(201, 162, 39, 0.4);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--charcoal);
+            color: rgba(255,255,255,0.5);
+            text-align: center;
+            padding: 2rem;
+            font-size: 0.85rem;
+        }
+
+        footer a {
+            color: var(--gold);
+            text-decoration: none;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 968px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .hero-text {
+                order: 2;
+            }
+
+            .hero-image {
+                order: 1;
+                max-width: 400px;
+                margin: 0 auto;
+            }
+
+            .hero-description {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .about-image {
+                position: relative;
+                top: 0;
+                max-width: 400px;
+                margin: 0 auto 2rem;
+            }
+
+            .show-gallery {
+                grid-template-columns: 1fr;
+                max-width: 400px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .video-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .albums {
+                grid-template-columns: 1fr;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .contact-info {
+                flex-direction: column;
+                gap: 1.5rem;
+            }
+        }
+
+        /* Mobile menu toggle - simplified */
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0.5rem;
+        }
+
+        @media (max-width: 968px) {
+            .mobile-menu-btn {
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-inner">
+            <a href="#" class="nav-logo">Caroline Pakter</a>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#show">The Show</a></li>
+                <li><a href="#watch">Watch</a></li>
+                <li><a href="#music">Music</a></li>
+                <li><a href="#contact">Book</a></li>
+            </ul>
+            <button class="mobile-menu-btn" aria-label="Menu">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <span class="hero-tagline">Singer · Performer · Storyteller</span>
+                    <h1 class="hero-title">Caroline Pakter</h1>
+                    <p class="hero-subtitle">From Showbiz to Shabbos</p>
+                    <p class="hero-description">
+                        Former West End actress turned Orthodox Jewish performer, bringing soulful, meaningful music to women and girls worldwide.
+                    </p>
+                    <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                        <a href="#contact" class="btn btn-primary">Book Caroline</a>
+                        <a href="#show" class="btn btn-outline">Discover the Show</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="images/headshot.jpg" alt="Caroline Pakter - Professional headshot">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about section" id="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-image">
+                    <img src="images/singing.webp" alt="Caroline Pakter performing">
+                </div>
+                <div class="about-content">
+                    <div class="flourish">
+                        <span class="flourish-icon">✦</span>
+                    </div>
+                    <h2>A Journey of Faith & Song</h2>
+                    <p>
+                        Caroline Pakter (née Cohen) is a London-based Orthodox Jewish singer and performer dedicated to uplifting and inspiring women and girls through soulful, meaningful music.
+                    </p>
+                    <p>
+                        A former West End actress and singer, Caroline was an understudy to Eliza Doolittle in <em>My Fair Lady</em> at Theatre Royal Drury Lane and trained at Paul McCartney's Liverpool Institute for Performing Arts (LIPA).
+                    </p>
+                    <p>
+                        Caroline performs exclusively for women-only audiences, offering custom performances for concerts and bas mitzvah celebrations. Her repertoire spans traditional and contemporary Jewish music alongside carefully selected, clean musical theatre songs—delivered with warmth, professionalism, and heartfelt connection.
+                    </p>
+                    <p>
+                        Having spent formative years at Neve Yerushalayim in Israel, Caroline's music is infused with emunah, joy, and authenticity. She has also run choirs for women and girls, using music as a tool for confidence, unity, and inspiration.
+                    </p>
+                    <div class="credentials">
+                        <span class="credential">West End Theatre</span>
+                        <span class="credential">LIPA Graduate</span>
+                        <span class="credential">Neve Yerushalayim</span>
+                        <span class="credential">2 Albums Released</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Show Section -->
+    <section class="show section" id="show">
+        <div class="container">
+            <div class="show-header">
+                <div class="flourish">
+                    <span class="flourish-icon" style="color: var(--gold);">✦</span>
+                </div>
+                <h2>From Showbiz to Shabbos</h2>
+                <p>A musical memoir — part storytelling, part concert, all heart</p>
+            </div>
+
+            <div class="show-gallery">
+                <img src="images/performance-1.webp" alt="Caroline performing on stage">
+                <img src="images/performance-2.webp" alt="Caroline in theatrical costume">
+                <img src="images/performance-3.webp" alt="Caroline performing">
+            </div>
+
+            <div class="show-content">
+                <p>
+                    <em>From Showbiz to Shabbos</em> is Caroline's signature women-only performance, sharing her personal journey from a rising star on the London West End to committing to a life of Torah.
+                </p>
+                <p>
+                    Through story and song, Caroline weaves together her experiences in professional musical theatre with her spiritual growth, creating an engaging, heartfelt, and deeply inspiring performance.
+                </p>
+                <p>
+                    The show features a blend of traditional and modern Jewish music alongside clean musical theatre selections, all connected to themes of identity, faith, courage, and joy.
+                </p>
+                <p style="color: var(--gold); font-style: italic; margin-top: 2rem;">
+                    Both uplifting and entertaining, the show resonates with women and girls of all ages—leaving audiences inspired, moved, and uplifted.
+                </p>
+
+                <div class="locations">
+                    <span>Israel</span>
+                    <span>London</span>
+                    <span>Manchester</span>
+                    <span>Glasgow</span>
+                    <span>Leeds</span>
+                    <span>New York</span>
+                    <span>Palo Alto</span>
+                    <span>Denver</span>
+                    <span>Johannesburg</span>
+                    <span>Cape Town</span>
+                    <span>Belgium</span>
+                    <span>Pesach Programmes Worldwide</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Videos Section -->
+    <section class="videos section" id="watch">
+        <div class="container">
+            <div class="videos-header">
+                <div class="flourish">
+                    <span class="flourish-icon">✦</span>
+                </div>
+                <h2>Watch Caroline Perform</h2>
+            </div>
+            <div class="video-grid">
+                <div class="video-item">
+                    <iframe
+                        src="https://www.youtube.com/embed/7J6Ba0OeZaA?rel=0&modestbranding=1"
+                        title="Caroline Pakter Performance"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+                <div class="video-item">
+                    <iframe
+                        src="https://www.youtube.com/embed/tRDgArwgaFw?rel=0&modestbranding=1"
+                        title="Caroline Pakter Performance"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+                <div class="video-item">
+                    <iframe
+                        src="https://www.youtube.com/embed/eFzHeq6e1vk?rel=0&modestbranding=1"
+                        title="Caroline Pakter Performance"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Music Section -->
+    <section class="music section" id="music">
+        <div class="container">
+            <div class="music-header">
+                <div class="flourish">
+                    <span class="flourish-icon">✦</span>
+                </div>
+                <h2>Music & Albums</h2>
+                <p class="text-muted" style="max-width: 600px; margin: 1rem auto 0;">
+                    Caroline has released two albums—compilations of original compositions alongside well-known songs by Abie Rottenberg and Mark Samowitz (Shooby Doop Shloimy).
+                </p>
+            </div>
+            <div class="albums">
+                <div class="album">
+                    <div class="album-cover">
+                        <img src="images/album-we-believe.jpg" alt="We Believe album cover">
+                    </div>
+                    <h3>We Believe</h3>
+                    <p>Original compositions and beloved classics</p>
+                </div>
+                <div class="album">
+                    <div class="album-cover">
+                        <img src="images/album-yachad.jpg" alt="Yachad album cover">
+                    </div>
+                    <h3>Yachad</h3>
+                    <p>Songs of unity and spiritual connection</p>
+                </div>
+            </div>
+            <p class="text-center text-muted" style="margin-top: 2rem;">
+                <em>Available for download on this website. Spotify coming soon.</em>
+            </p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact section" id="contact">
+        <div class="container">
+            <div class="flourish">
+                <span class="flourish-icon" style="color: var(--gold);">✦</span>
+            </div>
+            <h2>Book Caroline</h2>
+            <p>
+                Available for women's events, concerts, bas mitzvah celebrations, and Pesach programmes worldwide.
+            </p>
+            <a href="mailto:carolinepakter@gmail.com" class="btn btn-gold">Get in Touch</a>
+
+            <div class="contact-info">
+                <div class="contact-item">
+                    <strong>Phone</strong>
+                    <a href="tel:+447867179126">07867 179 126</a>
+                </div>
+                <div class="contact-item">
+                    <strong>Location</strong>
+                    <span>Edgware, London</span>
+                </div>
+                <div class="contact-item">
+                    <strong>Email</strong>
+                    <a href="mailto:carolinepakter@gmail.com">carolinepakter@gmail.com</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Caroline Pakter. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Navbar scroll effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
