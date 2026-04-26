@@ -1,0 +1,13 @@
+# Local Netlify folder
+.netlify
+
+# === Security / secrets ===
+.env
+.env.*
+secrets/
+*.pem
+*.key
+credentials.json
+service-account*.json
+google_*_token.json
+.DS_Store
