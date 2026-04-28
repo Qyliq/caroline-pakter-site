@@ -6,6 +6,24 @@
     <title>Caroline Pakter | From Showbiz to Shabbos</title>
     <meta name="description" content="London-based Orthodox Jewish singer and performer. Former West End actress bringing soulful music to women-only audiences worldwide.">
 
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://carolinepakter.com">
+    <meta property="og:title" content="Caroline Pakter | From Showbiz to Shabbos">
+    <meta property="og:description" content="London-based Orthodox Jewish singer and performer. Former West End actress bringing soulful music to women-only audiences worldwide.">
+    <meta property="og:image" content="https://carolinepakter.com/images/headshot.jpg">
+    <meta property="og:image:alt" content="Caroline Pakter — professional headshot">
+    <meta property="og:site_name" content="Caroline Pakter">
+    <meta property="og:locale" content="en_GB">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://carolinepakter.com">
+    <meta name="twitter:title" content="Caroline Pakter | From Showbiz to Shabbos">
+    <meta name="twitter:description" content="London-based Orthodox Jewish singer and performer. Former West End actress bringing soulful music to women-only audiences worldwide.">
+    <meta name="twitter:image" content="https://carolinepakter.com/images/headshot.jpg">
+    <meta name="twitter:image:alt" content="Caroline Pakter — professional headshot">
+
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -695,6 +713,67 @@
             }
         }
     </style>
+
+    <!-- Structured data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Person",
+          "@id": "https://carolinepakter.com/#person",
+          "name": "Caroline Pakter",
+          "jobTitle": ["Singer", "Performer", "Recording Artist"],
+          "description": "London-based Orthodox Jewish singer and performer. Former West End actress bringing soulful music to women-only audiences worldwide.",
+          "url": "https://carolinepakter.com",
+          "image": "https://carolinepakter.com/images/headshot.jpg",
+          "sameAs": [
+            "https://www.facebook.com/caroline.pakter/"
+          ],
+          "alumniOf": [
+            {
+              "@type": "EducationalOrganization",
+              "name": "Liverpool Institute for Performing Arts",
+              "url": "https://www.lipa.ac.uk/"
+            },
+            {
+              "@type": "EducationalOrganization",
+              "name": "Neve Yerushalayim"
+            }
+          ],
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Edgware",
+            "addressRegion": "Greater London",
+            "addressCountry": "GB"
+          },
+          "email": "paktercaroline@gmail.com",
+          "telephone": "+447867179126"
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://carolinepakter.com/#website",
+          "url": "https://carolinepakter.com",
+          "name": "Caroline Pakter",
+          "description": "Official website of singer and performer Caroline Pakter.",
+          "inLanguage": "en-GB",
+          "about": { "@id": "https://carolinepakter.com/#person" }
+        },
+        {
+          "@type": "MusicAlbum",
+          "name": "We Believe",
+          "byArtist": { "@id": "https://carolinepakter.com/#person" },
+          "image": "https://carolinepakter.com/images/album-we-believe.jpg"
+        },
+        {
+          "@type": "MusicAlbum",
+          "name": "Yachad",
+          "byArtist": { "@id": "https://carolinepakter.com/#person" },
+          "image": "https://carolinepakter.com/images/album-yachad.jpg"
+        }
+      ]
+    }
+    </script>
 </head>
 <body>
     <!-- Navigation -->
