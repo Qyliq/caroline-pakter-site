@@ -27,12 +27,13 @@ Simple static website for Caroline Pakter, a Jewish singer. Single-page site wit
 
 | Task | How |
 |------|-----|
-| Update website content | Edit `index.html` → commit + push to GitHub for backup → deploy separately (drag-drop OR CLI OR set up CI) |
-| Deploy via drag-drop | Open `app.netlify.com/projects/melodic-churros-37faf0` → drag the project folder onto the deploy zone |
-| Deploy via CLI | `cd` into project root → `SKIP_PREFLIGHT=1 npx netlify deploy --prod --site=eaa51ee2-e5c7-49a4-a59d-2b32a26b68fe --dir=.` (after `netlify login` if session expired) |
-| Wire up auto-deploy (one-time) | In the Netlify project page, click "Quick setup" → connect to `Qyliq/caroline-pakter-site` → branch `main` → blank build command → publish dir `.` |
+| Update website content | Edit `index.html` → `git commit -am "..." && git push origin main` → live in ~60s (Netlify CI) |
 | View live site | https://carolinepakter.com |
+| Manual deploy via drag-drop (fallback) | Open the Netlify dashboard → find the site → drag the project folder onto the deploy zone |
+| CLI deploy (fallback) | `cd` into project root → `SKIP_PREFLIGHT=1 npx netlify deploy --prod --site=<site-id> --dir=.` (look up site-id in Netlify dashboard or `netlify status`; run `netlify login` first if session expired) |
 | Send outreach email | Use latest `email-outreach-v*.html` template |
+
+> Operational identifiers (Netlify project name, site ID, badge URL) live in the private ledger at `~/.claude/ledger/caroline-pakter-site.md`, not here — this file is in a public repo.
 
 ## Context
 
