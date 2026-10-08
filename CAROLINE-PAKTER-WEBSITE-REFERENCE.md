@@ -98,7 +98,7 @@ Both uplifting and entertaining, the show resonates with women and girls of all 
 
 - **Phone:** 07867 179 126
 - **Location:** Edgware, London
-- **Email:** carolinepakter@gmail.com
+- **Email:** paktercaroline@gmail.com (changed on the site 5 Feb 2026, commit b61980f; the old carolinepakter@ address is stale)
 
 ---
 
